@@ -1,5 +1,6 @@
 from main import *
 
+
 def addTasks():
     choice = input("Введите задачу: ")
     print(f"Вы уверены что хотите сохранить задачу '{choice}'?")
@@ -21,6 +22,8 @@ def showTasks():
     print()
 
 def removesTasks():
+    if len(tasks) == 0:
+        print("Вы еще не добавили ни одной задачи!")
     for i in range(len(tasks)):
         print(f"{i + 1}. {tasks[i]}")
     print()
